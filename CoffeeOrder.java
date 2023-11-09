@@ -54,4 +54,16 @@ class CoffeeOrder extends Observable{
     private void transitionToDeliveredState(){
         currentState = new DeliveredState();
     }
+
+    public OrderState getState() {
+        return currentState;
+    }
+
+    public CoffeeDecorator getCoffee() {
+        return coffee;
+    }
+
+    public void setCoffee(CoffeeDecorator coffee) {
+        this.coffee = coffee;
+    }
 }
